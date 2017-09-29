@@ -12,12 +12,12 @@ android:layout_width="match_parent"
 android:layout_height="match_parent" />
 ```
 O próximo passo é criar uma instância JApiWebView do componente inserido no layout xml. É necessário passar, na função loadJapiWebView, a URL Base, Client ID e Client Secret. É necessáriu também informar a Activity que deverá ser exibida após a tela de login. 
-```
+```java
 JApiWebView japiWebView = (JApiWebView) findViewById(R.id.japiwebview);
 japiWebView.loadJapiWebView("URL_BASE", "CLIENT_ID", "CLIENT_SECRET", this, ResultActivity.class);
 ```
 Para recuperar as informação do Token você pode usar os seguintes códigos:
-```
+```java
 // Pegar o Access Token
 JApi.getAccessToken(context);
 // Pegar o Refresh Token
