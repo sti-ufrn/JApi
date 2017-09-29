@@ -27,6 +27,10 @@ JApi.getExpiresIn(context);
 // Pegar o Token Type 
 JApi.getTokenType(context);
 ```
+Para deslogar 
+```java
+JApi.deslogar();
+```
 Para entender melhor como funcionar o Authorization Code da API.sistema veja o passo a passo abaixo:
 
 1 - O usuário inicia a interação com a aplicação;
