@@ -55,7 +55,7 @@ public class JApiWebView extends WebView implements AsyncResponse {
     }
 
 
-    public void loadJapiWebView(final String urlBase, final String clientId, final String clientSecret, final Activity myActivity, final Intent intentResult) {
+    public void loadJapiWebView(final String urlBase, final String clientId, final String clientSecret, final Activity myActivity, final Class ativityResult) {
         String url = createUrl(urlBase, clientId);
 
         progressDialog = ProgressDialog.show(getContext(), "Japi Authorization", "Carregando...", true);
@@ -78,7 +78,7 @@ public class JApiWebView extends WebView implements AsyncResponse {
                         return true;
                     }
 
-                    AuthorizationTask authorizationTask = new AuthorizationTask(myActivity, intentResult);
+                    AuthorizationTask authorizationTask = new AuthorizationTask(myActivity, ativityResult);
                     authorizationTask.delegate = JApiWebView.this;
                     authorizationTask.execute(urlBase, clientId, clientSecret, authorizationCode);
                 } else {

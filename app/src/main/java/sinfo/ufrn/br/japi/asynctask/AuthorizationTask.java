@@ -25,14 +25,14 @@ import sinfo.ufrn.br.japi.interfaces.AsyncResponse;
 public class AuthorizationTask extends AsyncTask<String, Void, OAuthResponse> {
 
     private Activity mActivity;
-    private Intent mIntent;
+    private Class mClass;
     private ProgressDialog mProgressDialog;
 
     public AsyncResponse delegate = null;
 
-    public AuthorizationTask(Activity activity, Intent intent) {
+    public AuthorizationTask(Activity activity, Class mClass) {
         this.mActivity = activity;
-        this.mIntent = intent;
+        this.mClass = mClass;
     }
 
     @Override
@@ -75,7 +75,7 @@ public class AuthorizationTask extends AsyncTask<String, Void, OAuthResponse> {
         }
 
         delegate.processAuthorization(result);
-        mActivity.startActivity(mIntent);
+        mActivity.startActivity(new Intent(mActivity, mClass));
         mActivity.finish();
     }
 
