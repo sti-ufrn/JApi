@@ -1,20 +1,31 @@
 # JApi Authorization Code - SINFO/UFRN
 
-Essa API tem como propósito auxiliar os desenvolvedores Android ao fazer uma autenticação do tipo Authorization Code na API.sistemas (https://api.ufrn.br/) da UFRN. Para usar o projeto basta importar o projeto no gradle
+Esta API tem como propósito auxiliar os desenvolvedores Android a fazer uma autenticação do tipo Authorization Code na API.sistemas (https://api.ufrn.br/) da UFRN. Para usar o projeto basta importar o projeto no gradle
 ```gradle
 compile 'sinfo.ufrn.br:JApi:1.0.0'
 ```
-Após importar o projeto você deve inserir esse código no seu layout.
+Após importar o projeto é necessário inserir o código abaixo no layout da aplicação.
 ```xml
 <sinfo.ufrn.br.japi.JApiWebView
 android:id="@+id/japiwebview"
 android:layout_width="match_parent"
 android:layout_height="match_parent" />
 ```
-O próximo passo é criar uma instância JApiWebView do componente inserido no layout xml. Você deve passar a URL Base, Client ID e Client Secret. Você também precisa informar a Activity que deve aparecer após a tela de login. 
-```java
+O próximo passo é criar uma instância JApiWebView do componente inserido no layout xml. É necessário passar, na função loadJapiWebView, a URL Base, Client ID e Client Secret. É necessáriu também informar a Activity que deverá ser exibida após a tela de login. 
+```
 JApiWebView japiWebView = (JApiWebView) findViewById(R.id.japiwebview);
 japiWebView.loadJapiWebView("URL_BASE", "CLIENT_ID", "CLIENT_SECRET", this, ResultActivity.class);
+```
+Para recuperar as informação do Token você pode usar os seguintes códigos:
+```
+// Pegar o Access Token
+JApi.getAccessToken(context);
+// Pegar o Refresh Token
+JApi.getRefreshToken(context);
+// Pegar o Expires In
+JApi.getExpiresIn(context);
+// Pegar o Token Type 
+JApi.getTokenType(context);
 ```
 Para entender melhor como funcionar o Authorization Code da API.sistema veja o passo a passo abaixo:
 
@@ -58,3 +69,20 @@ GET
 ]
 ```
 ![alt text](https://api.ufrn.br/images/authorization_code_ufrn.png)
+
+## License
+
+```
+Copyright 2013 Square, Inc.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
