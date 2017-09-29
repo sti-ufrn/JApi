@@ -52,7 +52,11 @@ public class JApi {
         return preferences.getString(KEY_TOKEN_TYPE, null);
     }
 
-    public static void deslogar() {
-        // TODO: Falta implementar
+     public static void deslogar(Context context) {
+        SharedPreferences preferences = context.getSharedPreferences(KEY_USER_INFO, 0);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.clear();
+        
+        JApiCache.deleteCache(context);
     }
 }
