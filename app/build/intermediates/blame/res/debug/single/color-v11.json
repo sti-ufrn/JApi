@@ -1,10 +1,10 @@
 [
     {
-        "merged": "/Users/victoroliveira/Downloads/Japi/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_light.xml",
-        "source": "/Users/victoroliveira/.android/build-cache/9f598f6be8035405eeab486eab93af04895a7343/output/res/color-v11/abc_background_cache_hint_selector_material_light.xml"
+        "merged": "/home/victor/Documentos/Github/JApi/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_light.xml",
+        "source": "/home/victor/.android/build-cache/6477b23b4bc58098b30cc7327659f31ac1ff91cc/output/res/color-v11/abc_background_cache_hint_selector_material_light.xml"
     },
     {
-        "merged": "/Users/victoroliveira/Downloads/Japi/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_dark.xml",
-        "source": "/Users/victoroliveira/.android/build-cache/9f598f6be8035405eeab486eab93af04895a7343/output/res/color-v11/abc_background_cache_hint_selector_material_dark.xml"
+        "merged": "/home/victor/Documentos/Github/JApi/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_dark.xml",
+        "source": "/home/victor/.android/build-cache/6477b23b4bc58098b30cc7327659f31ac1ff91cc/output/res/color-v11/abc_background_cache_hint_selector_material_dark.xml"
     }
 ]
