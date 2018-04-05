@@ -3,12 +3,12 @@
 Esta API tem como propósito auxiliar os desenvolvedores Android a fazer uma autenticação do tipo Authorization Code na API.sistemas (https://api.ufrn.br/) da UFRN. Para usar o projeto basta importar o projeto no gradle
 ```gradle
 
-repositories {
-    	maven { url "http://repo.info.ufrn.br/artifactory/libs-release-local" }
+repositories { 
+     maven { url "http://repo.info.ufrn.br/artifactory/libs-release-local" } 
 }
 
-dependencies {
-	compile(group: 'br.ufrn.mobile.japi', name: 'app', version: '1.0.0', ext: 'aar')
+dependencies { 
+     compile(group: 'br.ufrn.mobile.japi', name: 'app', version: '1.0.0', ext: 'aar') 
 }
 ```
 Após importar o projeto é necessário inserir o código abaixo no layout da aplicação.
