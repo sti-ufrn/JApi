@@ -79,7 +79,7 @@ GET
 	}
 ]
 ```
-![alt text](https://api.ufrn.br/images/authorization_code_ufrn.png)
+![alt text](https://api.ufrn.br/assets/images/authorization_code_ufrn_2.png)
 
 ## License
 
